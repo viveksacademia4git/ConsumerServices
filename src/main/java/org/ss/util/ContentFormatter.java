@@ -1,9 +1,14 @@
 package org.ss.util;
 
+import static java.util.Calendar.DAY_OF_MONTH;
+import static java.util.Calendar.MONTH;
+import static java.util.Calendar.YEAR;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -48,11 +53,16 @@ public class ContentFormatter {
 			final String picturelink = getImageUrl(json.getString("content:encoded"));
 			final String browserviewlink = json.getString("link");
 			try {
-				feedList.add(new Feed(title, dateFormat.parse(strDate), browserviewlink, picturelink));
+				final Calendar c = new GregorianCalendar();
+				c.setTime(dateFormat.parse(strDate));
+				final Date date = new GregorianCalendar(c.get(YEAR), c.get(MONTH), c.get(DAY_OF_MONTH)).getTime();
+				log.info("Formatted Date ======>>>>>>> {}", date);
+				feedList.add(new Feed(title, date, browserviewlink, picturelink));
 			} catch (ParseException e) {
 				log.error(String.format("An error occurred while parsing date: %s", strDate), e);
 			}
 		});
+
 		return feedList;
 	}
 

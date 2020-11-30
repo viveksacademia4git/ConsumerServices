@@ -61,7 +61,7 @@ class ConsumerServiceImplTest {
 		}
 		final List<Feed> feedList = consumerService.feedsFromPoorlyDrawnLines();
 		assertEquals(10, feedList.size(), "Number of feeds should be 10");
-		final Feed expected = new Feed("Business Shorts", new GregorianCalendar(2020, 10, 23, 19, 14, 47).getTime(),
+		final Feed expected = new Feed("Business Shorts", new GregorianCalendar(2020, 10, 23).getTime(),
 				"http://feedproxy.google.com/~r/PoorlyDrawnLines/~3/bn7cSaaRN-0/",
 				"http://www.poorlydrawnlines.com/wp-content/uploads/2020/11/Business-shorts.png");
 		assertEquals(expected, feedList.get(0), "First feed should match with the expected feed");
