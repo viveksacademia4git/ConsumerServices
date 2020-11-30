@@ -2,6 +2,15 @@
 
 See: [docker-compose.yml](blob/main/docker-compose.yml)
 
+
+### Gradle Build
+
+- Linux: `sh ./gradlew build`
+- Windows: `gradlew build`
+
+
+### Docker Compose
+
 Execute command: `docker-compose up`
 
 ```
