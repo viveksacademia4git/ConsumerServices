@@ -15,12 +15,12 @@ class ContentFormatterTest {
 
 	@Test
 	void testFormatXKCD() throws IOException {
-		final String file = "testdata/Test_XKCD_0.json";
+		final String file = "testdata/Test_XKCD_10.json";
 		try (var stream = ContentFormatterTest.class.getClassLoader().getResourceAsStream(file)) {
 			final String data = IOUtils.toString(stream, StandardCharsets.UTF_8).trim();
-			final Feed expected = new Feed("Barrel - Part 1", new GregorianCalendar(2006, 0, 1).getTime(),
-					"https://xkcd.com/1/info.0.json", "https://imgs.xkcd.com/comics/barrel_cropped_(1).jpg");
-			assertEquals(expected, ContentFormatter.formatXKCD(data, "https://xkcd.com/1/info.0.json"));
+			final Feed expected = new Feed("Pi Equals", new GregorianCalendar(2006, 0, 1).getTime(),
+					"https://xkcd.com/10/info.0.json", "https://imgs.xkcd.com/comics/pi.jpg");
+			assertEquals(expected, ContentFormatter.formatXKCD(data, "https://xkcd.com/10/info.0.json"));
 		}
 	}
 

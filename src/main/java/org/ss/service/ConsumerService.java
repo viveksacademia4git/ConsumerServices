@@ -11,12 +11,17 @@ import org.ss.service.impl.ConsumerServiceImpl;
  * Abstract interface with functions to fetch the feeds from remote services.
  * 
  * @author Vivek Yadav
- * @created 30 Jul 2020
+ * @created 30 Nov 2020
  * 
  * @see ConsumerServiceImpl
  * @see MainRestController
  */
 public interface ConsumerService {
+
+	/**
+	 * Perform processes before starting feed consumption process.
+	 */
+	void preFeeds();
 
 	/**
 	 * Consumes data from 'https://xkcd.com/json.html' and returns the data

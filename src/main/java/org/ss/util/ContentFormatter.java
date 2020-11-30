@@ -22,6 +22,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.ss.model.Feed;
 
+/**
+ * Utility for formatting response contents in JSON and XML to {@link Feed}.
+ * 
+ * @author Vivek Yadav
+ * @created 30 Nov 2020
+ *
+ */
 public class ContentFormatter {
 
 	private static final Logger log = LoggerFactory.getLogger(ContentFormatter.class);

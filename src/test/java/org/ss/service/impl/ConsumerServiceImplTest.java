@@ -37,18 +37,39 @@ class ConsumerServiceImplTest {
 	}
 
 	@Test
-	void testFeedsFromXKCD() throws IOException {
-		final String file = "testdata/Test_XKCD_0.json";
+	void testPreFeeds() throws IOException {
+		final String file = "testdata/Test_XKCD.json";
 		try (var stream = ConsumerServiceImplTest.class.getClassLoader().getResourceAsStream(file)) {
 			final String data = IOUtils.toString(stream, StandardCharsets.UTF_8).trim();
-			when(restTemplate.getForEntity("https://xkcd.com/1/info.0.json", String.class))
+			when(restTemplate.getForEntity("https://xkcd.com/info.0.json", String.class))
+					.thenReturn(ok().contentType(APPLICATION_JSON).body(data));
+		}
+		consumerService.preFeeds();
+		assertEquals(10, ReflectionTestUtils.getField(consumerService, "indexTopXKCD"));
+	}
+
+	@Test
+	void testFeedsFromXKCD() throws IOException {
+		final String file = "testdata/Test_XKCD_10.json";
+		try (var stream = ConsumerServiceImplTest.class.getClassLoader().getResourceAsStream(file)) {
+			final String data = IOUtils.toString(stream, StandardCharsets.UTF_8).trim();
+			when(restTemplate.getForEntity("https://xkcd.com/10/info.0.json", String.class))
 					.thenReturn(ok().contentType(APPLICATION_JSON).body(data));
 		}
 		final List<Feed> feedList = consumerService.feedsFromXKCD();
-		final List<Feed> expectedFeeds = List
-				.of(new Feed("Barrel - Part 1", new GregorianCalendar(2006, 0, 1).getTime(),
-						"https://xkcd.com/1/info.0.json", "https://imgs.xkcd.com/comics/barrel_cropped_(1).jpg"));
+		final List<Feed> expectedFeeds = List.of(new Feed("Pi Equals", new GregorianCalendar(2006, 0, 1).getTime(),
+				"https://xkcd.com/10/info.0.json", "https://imgs.xkcd.com/comics/pi.jpg"));
 		assertEquals(expectedFeeds, feedList);
+	}
+
+	@Test
+	void testFeedsFromXKCDCache() throws IOException {
+		this.testPreFeeds();
+		this.testFeedsFromXKCD();
+		final List<Feed> expectedFeeds = List.of(new Feed("Pi Equals", new GregorianCalendar(2006, 0, 1).getTime(),
+				"https://xkcd.com/10/info.0.json", "https://imgs.xkcd.com/comics/pi.jpg"));
+		assertEquals(expectedFeeds, ReflectionTestUtils.getField(consumerService, "cacheXKCD"),
+				"Cache should contain the expected value.");
 	}
 
 	@Test
