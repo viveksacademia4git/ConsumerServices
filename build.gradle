@@ -1,0 +1,56 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.2.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'ConsumerServices'
+// version = '0.0.1-SNAPSHOT' // Not maintaining version
+sourceCompatibility = '12'
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	set('snippetsDir', file("build/generated-snippets"))
+}
+
+configurations {
+	// Conflicts with the Spring Framework's Logging i.e. Logback
+    all*.exclude module : 'spring-boot-starter-logging'
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	implementation 'org.json:json:20200518'
+
+	// SL4J
+    implementation 'org.slf4j:slf4j-api:1.7.30'
+    implementation 'org.slf4j:slf4j-log4j12:1.7.30'  // for binding with underlying log4j logging impl
+
+    // Log4j2
+	implementation 'org.apache.logging.log4j:log4j-core:2.11.2'
+	implementation 'log4j:apache-log4j-extras:1.2.17'
+
+	compileOnly 'org.projectlombok:lombok:1.18.10'
+	annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+    testImplementation 'org.easytesting:fest-assert:1.4'
+
+}
+
+test {
+	systemProperty 'spring.profiles.active', 'test'
+	useJUnitPlatform()
+}
+
+javadoc {
+    options.tags = [ "created:a:Created On", "modified:a:Last Modified" ] 
+}
