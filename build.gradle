@@ -40,6 +40,8 @@ dependencies {
 
     implementation 'commons-io:commons-io:2.6'
 
+    implementation 'org.jsoup:jsoup:1.12.2'
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}

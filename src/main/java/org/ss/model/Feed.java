@@ -17,9 +17,9 @@ public class Feed {
 	private Date date;
 
 	@NonNull
-	private String picturelink;
+	private String browserviewlink;
 
 	@NonNull
-	private String browserviewlink;
+	private String picturelink;
 
 }

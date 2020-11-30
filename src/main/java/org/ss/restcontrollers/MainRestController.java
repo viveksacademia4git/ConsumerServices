@@ -23,12 +23,14 @@ public class MainRestController {
 
 	@GetMapping("/")
 	public Map<String, Object> baseUrl() {
-		final List<Feed> feeds = consumerService.consumedFeeds();
-		if (feeds.isEmpty()) {
-			return Map.of("status", "error", "message", "No feeds exist", "data", feeds);
+		final List<Feed> feedsXKCD = consumerService.feedsFromXKCD();
+		final List<Feed> feedsPoorlyDrawnLines = consumerService.feedsFromPoorlyDrawnLines();
+		if (feedsXKCD.isEmpty() && feedsPoorlyDrawnLines.isEmpty()) {
+			return Map.of("status", "error", "message", "No feeds exist", "data", List.of());
 		}
-		final String message = String.format("No of feed: %d", feeds.size());
-		return Map.of("status", "success", "message", message, "data", feeds);
+		feedsPoorlyDrawnLines.addAll(feedsXKCD);
+		final String message = String.format("Number of feed: %d", feedsPoorlyDrawnLines.size());
+		return Map.of("status", "success", "message", message, "data", feedsPoorlyDrawnLines);
 	}
 
 }

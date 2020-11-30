@@ -29,15 +29,15 @@ class MainRestControllerTestIntegration {
 
 	@Test
 	void testBaseUrlWithFeed() throws Exception {
-		final List<Feed> feeds = List.of(new Feed("title", new Date(), "picturelink", "browserviewlink"));
-		when(consumerService.consumedFeeds()).thenReturn(feeds);
+		final List<Feed> feeds = List.of(new Feed("title", new Date(), "browserviewlink", "picturelink"));
+		when(consumerService.feedsFromXKCD()).thenReturn(feeds);
 		this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
-				.andExpect(content().string(Matchers.containsString("\"message\":\"No of feed: 1\"")));
+				.andExpect(content().string(Matchers.containsString("\"message\":\"Number of feed: 1\"")));
 	}
 
 	@Test
 	void testBaseUrlWithoutFeed() throws Exception {
-		when(consumerService.consumedFeeds()).thenReturn(List.of());
+		when(consumerService.feedsFromXKCD()).thenReturn(List.of());
 		this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
 				.andExpect(content().string(Matchers.containsString("\"message\":\"No feeds exist\"")));
 	}
