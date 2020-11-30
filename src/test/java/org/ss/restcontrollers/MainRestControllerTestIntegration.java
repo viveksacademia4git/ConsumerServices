@@ -29,7 +29,7 @@ class MainRestControllerTestIntegration {
 
 	@Test
 	void testBaseUrlWithFeed() throws Exception {
-		final List<Feed> feeds = List.of(new Feed("picturelink", "title", "browserviewlink", new Date()));
+		final List<Feed> feeds = List.of(new Feed("title", new Date(), "picturelink", "browserviewlink"));
 		when(consumerService.consumedFeeds()).thenReturn(feeds);
 		this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
 				.andExpect(content().string(Matchers.containsString("\"message\":\"No of feed: 1\"")));

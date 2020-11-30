@@ -16,6 +16,7 @@ class ApplicationConfigurationTest {
 	@Autowired
     private RestTemplate restTemplate;
 
+	@Test
 	void testGetRestTemplate() {
 		assertNotNull(restTemplate, "Rest Template should not be null.");
 	}

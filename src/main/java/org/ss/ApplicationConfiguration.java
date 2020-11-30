@@ -10,8 +10,10 @@ import org.springframework.web.client.RestTemplate;
  * @author Vivek Yadav
  * @created 30 Nov 2020
  */
+@Configuration
 public class ApplicationConfiguration {
 
+	@Bean
 	public RestTemplate getRestTemplate() {
 		return new RestTemplate();
 	}

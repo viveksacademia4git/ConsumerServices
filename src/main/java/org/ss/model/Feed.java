@@ -11,15 +11,15 @@ import lombok.RequiredArgsConstructor;
 public class Feed {
 
 	@NonNull
-	private String picturelink;
-
-	@NonNull
 	private String title;
 
 	@NonNull
-	private String browserviewlink;
+	private Date date;
 
 	@NonNull
-	private Date date;
+	private String picturelink;
+
+	@NonNull
+	private String browserviewlink;
 
 }
