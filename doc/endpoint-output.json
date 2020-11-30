@@ -1,0 +1,126 @@
+{
+	"status": "success",
+	"message": "Number of feed: 20",
+	"data": [
+		{
+			"title": "Thank Me Later",
+			"date": "2020-11-30T00:00:00.000+00:00",
+			"browserviewlink": "http://feedproxy.google.com/~r/PoorlyDrawnLines/~3/32VgwKUfr2o/",
+			"picturelink": "http://www.poorlydrawnlines.com/wp-content/uploads/2020/11/Thank_Me_Later2.png"
+		},
+		{
+			"title": "Cyber Cafe",
+			"date": "2020-11-30T00:00:00.000+00:00",
+			"browserviewlink": "https://xkcd.com/2392/info.0.json",
+			"picturelink": "https://imgs.xkcd.com/comics/cyber_cafe.png"
+		},
+		{
+			"title": "Life Before the Pandemic",
+			"date": "2020-11-27T00:00:00.000+00:00",
+			"browserviewlink": "https://xkcd.com/2391/info.0.json",
+			"picturelink": "https://imgs.xkcd.com/comics/life_before_the_pandemic.png"
+		},
+		{
+			"title": "Linguists",
+			"date": "2020-11-25T00:00:00.000+00:00",
+			"browserviewlink": "https://xkcd.com/2390/info.0.json",
+			"picturelink": "https://imgs.xkcd.com/comics/linguists.png"
+		},
+		{
+			"title": "Business Shorts",
+			"date": "2020-11-23T00:00:00.000+00:00",
+			"browserviewlink": "http://feedproxy.google.com/~r/PoorlyDrawnLines/~3/bn7cSaaRN-0/",
+			"picturelink": "http://www.poorlydrawnlines.com/wp-content/uploads/2020/11/Business-shorts.png"
+		},
+		{
+			"title": "Unread",
+			"date": "2020-11-23T00:00:00.000+00:00",
+			"browserviewlink": "https://xkcd.com/2389/info.0.json",
+			"picturelink": "https://imgs.xkcd.com/comics/unread.png"
+		},
+		{
+			"title": "On the Horse",
+			"date": "2020-11-20T00:00:00.000+00:00",
+			"browserviewlink": "http://feedproxy.google.com/~r/PoorlyDrawnLines/~3/0pzxCOTbtD8/",
+			"picturelink": "http://www.poorlydrawnlines.com/wp-content/uploads/2020/11/on_the_horse.png"
+		},
+		{
+			"title": "Viral Quiz Identity Theft",
+			"date": "2020-11-20T00:00:00.000+00:00",
+			"browserviewlink": "https://xkcd.com/2388/info.0.json",
+			"picturelink": "https://imgs.xkcd.com/comics/viral_quiz_identity_theft.png"
+		},
+		{
+			"title": "Through a Lot",
+			"date": "2020-11-18T00:00:00.000+00:00",
+			"browserviewlink": "http://feedproxy.google.com/~r/PoorlyDrawnLines/~3/bbQs6DxQ8ik/",
+			"picturelink": "http://www.poorlydrawnlines.com/wp-content/uploads/2020/11/through_a_lot2.png"
+		},
+		{
+			"title": "Blair Witch",
+			"date": "2020-11-18T00:00:00.000+00:00",
+			"browserviewlink": "https://xkcd.com/2387/info.0.json",
+			"picturelink": "https://imgs.xkcd.com/comics/blair_witch.png"
+		},
+		{
+			"title": "City Monster: A Graphic Novel",
+			"date": "2020-11-17T00:00:00.000+00:00",
+			"browserviewlink": "http://feedproxy.google.com/~r/PoorlyDrawnLines/~3/-LUWyHAnink/",
+			"picturelink": "http://www.poorlydrawnlines.com/wp-content/uploads/2020/11/CityMonster-SocialShares-Skyline_v2-1024x1024.jpg"
+		},
+		{
+			"title": "Ten Years",
+			"date": "2020-11-16T00:00:00.000+00:00",
+			"browserviewlink": "https://xkcd.com/2386/info.0.json",
+			"picturelink": "https://imgs.xkcd.com/comics/ten_years.png"
+		},
+		{
+			"title": "Everything Changes",
+			"date": "2020-11-13T00:00:00.000+00:00",
+			"browserviewlink": "http://feedproxy.google.com/~r/PoorlyDrawnLines/~3/G9tknt5FqZk/",
+			"picturelink": "http://www.poorlydrawnlines.com/wp-content/uploads/2020/11/everything_changes_2.png"
+		},
+		{
+			"title": "Final Exam",
+			"date": "2020-11-13T00:00:00.000+00:00",
+			"browserviewlink": "https://xkcd.com/2385/info.0.json",
+			"picturelink": "https://imgs.xkcd.com/comics/final_exam.png"
+		},
+		{
+			"title": "Set in the Present",
+			"date": "2020-11-11T00:00:00.000+00:00",
+			"browserviewlink": "https://xkcd.com/2384/info.0.json",
+			"picturelink": "https://imgs.xkcd.com/comics/set_in_the_present.png"
+		},
+		{
+			"title": "No Free Time",
+			"date": "2020-11-09T00:00:00.000+00:00",
+			"browserviewlink": "http://feedproxy.google.com/~r/PoorlyDrawnLines/~3/UFFv5ZtO7ng/",
+			"picturelink": "http://www.poorlydrawnlines.com/wp-content/uploads/2020/11/No_Free_Time.png"
+		},
+		{
+			"title": "Electoral Precedent 2020",
+			"date": "2020-11-09T00:00:00.000+00:00",
+			"browserviewlink": "https://xkcd.com/2383/info.0.json",
+			"picturelink": "https://imgs.xkcd.com/comics/electoral_precedent_2020.png"
+		},
+		{
+			"title": "Busy Day",
+			"date": "2020-11-06T00:00:00.000+00:00",
+			"browserviewlink": "http://feedproxy.google.com/~r/PoorlyDrawnLines/~3/aYMUW3Lhy-U/",
+			"picturelink": "http://www.poorlydrawnlines.com/wp-content/uploads/2020/11/busy-day.png"
+		},
+		{
+			"title": "Time is Moving",
+			"date": "2020-11-02T00:00:00.000+00:00",
+			"browserviewlink": "http://feedproxy.google.com/~r/PoorlyDrawnLines/~3/tSC6q8oVlpw/",
+			"picturelink": "http://www.poorlydrawnlines.com/wp-content/uploads/2020/11/Time-is-moving.png"
+		},
+		{
+			"title": "Hard Truths",
+			"date": "2020-10-28T00:00:00.000+00:00",
+			"browserviewlink": "http://feedproxy.google.com/~r/PoorlyDrawnLines/~3/-rEcCIWq6bk/",
+			"picturelink": "http://www.poorlydrawnlines.com/wp-content/uploads/2020/10/hard_truths.png"
+		}
+	]
+}

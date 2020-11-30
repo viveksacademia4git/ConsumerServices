@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  springboot-docker-compose-ConsumerServices-container:
-    image: springboot-docker-compose-ConsumerServices:1
+  springboot-docker-compose-consumer-services-container:
+    image: springboot-docker-compose-consumer-services:1
     build:
       context: ./
       dockerfile: Dockerfile
     volumes:
-      - /data/springboot-docker-compose-ConsumerServices
+      - /data/springboot-docker-compose-consumer-services
     ports:
       - "8080:8080"

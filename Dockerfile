@@ -1,8 +1,10 @@
 
 FROM openjdk:12
 
-ADD build/libs/ConsumerServices.jar ConsumerServices.jar
+VOLUME /tmp
 
-ENTRYPOINT ["java","-jar", "ConsumerServices.jar"]
+ADD build/libs/ConsumerServices.jar consumer-services.jar
 
 EXPOSE 8080
+
+ENTRYPOINT ["java","-jar", "consumer-services.jar"]
