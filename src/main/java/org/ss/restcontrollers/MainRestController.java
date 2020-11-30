@@ -1,11 +1,13 @@
 package org.ss.restcontrollers;
 
-import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.ss.model.Feed;
+import org.ss.service.ConsumerService;
 
 /**
  * Main REST controller.
@@ -16,9 +18,17 @@ import org.ss.model.Feed;
 @RestController
 public class MainRestController {
 
+	@Autowired
+	private ConsumerService consumerService;
+
 	@GetMapping("/")
-	public List<Feed> base() {
-		return List.of(new Feed("picturelink", "title", "browserviewlink", new Date()));
+	public Map<String, Object> baseUrl() {
+		final List<Feed> feeds = consumerService.consumedFeeds();
+		if (feeds.isEmpty()) {
+			return Map.of("status", "error", "message", "No feeds exist", "data", feeds);
+		}
+		final String message = String.format("No of feed: %d", feeds.size());
+		return Map.of("status", "success", "message", message, "data", feeds);
 	}
 
 }
