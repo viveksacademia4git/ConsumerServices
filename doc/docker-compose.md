@@ -1,6 +1,6 @@
 # Docker-Compose SpringBoot Execution
 
-See: [docker-compose.yml](blob/main/docker-compose.yml)
+See: [docker-compose.yml](../docker-compose.yml)
 
 
 ### Gradle Build

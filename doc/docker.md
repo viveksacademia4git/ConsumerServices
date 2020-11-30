@@ -1,6 +1,6 @@
 # Docker SpringBoot Execution
 
-See: [Dockerfile](blob/main/Dockerfile)
+See: [Dockerfile](../Dockerfile)
 
 ### Gradle Build
 
